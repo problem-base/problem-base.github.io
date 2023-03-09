@@ -25,7 +25,7 @@ b) Hitung laju air yang melewati bagian pipa $B$ tepat setelah keran dibuka.
 c) Hitung tekanan pada bagian pipa $B$ tepat setelah keran dibuka
 
 # 5
-Gas ideal sebanyak $\frac{1}{8,31}$ mol mengalami proses $A \rightarrow B \rightarrow C \rightarrow A$ dalam suatu mesin yang dapat digambarkan dengan diagram tekanan terhadap volume seperti pada gambar. Proses $CA$ adalah proses adiabatik. Diketahui $p_0 = 160$ kPa dan $V_0 = 8 liter$  
+Gas ideal sebanyak $\frac{1}{8,31}$ mol mengalami proses $A \rightarrow B \rightarrow C \rightarrow A$ dalam suatu mesin yang dapat digambarkan dengan diagram tekanan terhadap volume seperti pada gambar. Proses $CA$ adalah proses adiabatik. Diketahui $p_0 = 160$ kPa dan $V_0 = 8$ liter  
 a) Hitung suhu gas tersebut pada keadaan $A$, $B$, dan $C$  
 b) Hitung rasio kapasitas kalor pada tekanan tetap dan volume tetap $(C_p/C_v)$  
 c) Hitung efisiensi dari mesin tersebut
