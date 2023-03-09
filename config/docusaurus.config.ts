@@ -13,10 +13,14 @@ const baseDocsOption = {
     rehypePlugins: [rehypeKatex]
 } as OptionsDocs
 
+const organizationName = "problem-base"
+const projectName = "problem-base.github.io"
+
 export default {
     title: "PBase",
     baseUrl: "/",
-    url: "https://example.com",
+    url: `https://${organizationName}.github.io`,
+    organizationName, projectName,
     themes: [
         [
             '@docusaurus/theme-classic',
