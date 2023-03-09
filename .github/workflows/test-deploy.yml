@@ -1,7 +1,7 @@
-name: Deploy Content
+name: Test Content
 
 on:
-  push:
+  pull_request:
     branches: [main]
 
 permissions:
@@ -34,15 +34,3 @@ jobs:
 
       - name: Build Docusaurus
         run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v1
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: build
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
