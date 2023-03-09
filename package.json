@@ -1,0 +1,34 @@
+{
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "dev": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "config-build": "rollup --config ./config/rollup.config.mjs",
+    "config-dev": "rollup --config ./config/rollup.config.mjs -w",
+    "plugin-dev": "rollup --config ./plugin/rollup.config.mjs -w"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.3.1",
+    "@docusaurus/plugin-content-docs": "^2.3.1",
+    "@docusaurus/plugin-content-pages": "^2.3.1",
+    "@docusaurus/theme-classic": "^2.3.1",
+    "@docusaurus/theme-common": "^2.3.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "glob": "^9.2.1",
+    "rehype-katex": "^6.0.2",
+    "remark": "^14.0.2",
+    "remark-math": "^3.0.1",
+    "rollup": "^3.18.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^2.3.1",
+    "@tsconfig/docusaurus": "^1.0.6",
+    "micromark-util-types": "^1.0.2",
+    "rehype-stringify": "^9.0.3",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2"
+  }
+}
