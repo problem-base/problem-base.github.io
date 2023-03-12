@@ -1,4 +1,4 @@
-# UAS STEI 22
+# UAS 22
 
 # 1
 Silinder pejal bergerak dari keadaan diam pada posisi ketinggian pusat massa (TPM) $1,5$ m seperti pada gambar. Kemudian silinder itu menggelinding tanpa slip di sepanjang bidang miring $30 \degree$ dengan percepatan TPM $3,33$ m/detik$^2$. Massa silinder tersebut adalah $1,0$ kg dan jari-jari $6,0$ cm. Diketahui momen inersia silinder pejal, $I = 0,5(mR^2)$.  

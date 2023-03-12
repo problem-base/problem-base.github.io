@@ -1,4 +1,4 @@
-# KBF STEI 22
+# KBF 2 STEI 22
 
 ## 1
 Telah diketahui bahwa 
