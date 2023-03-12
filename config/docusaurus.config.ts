@@ -6,6 +6,7 @@ import type { ThemeConfig, NavbarItem } from "@docusaurus/theme-common"
 
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
+import "rehype-katex/node_modules/katex/contrib/mhchem/mhchem"
 
 const BASE_DIR = process.cwd()
 const baseDocsOption = {
