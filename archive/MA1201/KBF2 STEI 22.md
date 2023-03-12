@@ -1,5 +1,3 @@
-# KBF 2 STEI 22
-
 ## 1
 Telah diketahui bahwa 
 $\displaystyle \sum_{k = 0}^{\infty} \frac{(-1)^k}{(2k+1)!}x^{2k+1}, -\infty < x < \infty$. 

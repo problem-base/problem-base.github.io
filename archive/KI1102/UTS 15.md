@@ -1,5 +1,3 @@
-# UTS 15
-
 ## 1 (12 Poin)
 Air minum tidak boleh mengandung ion $\ce{Mn}$ melebihi $0,05$ mg/mL. Bila kandungan ion $\ce{Mn}$ di dalam air melebihi batas maksimum, maka rasa air menjadi tidak enak, air tersebut dapat memudarkan warna pakaian, dan merusak permukaan porselin. Ion $\ce{Mn^2+}$ bereaksi dengan ion bismutat $(\ce{BiO3-})$ dalam suasana asam menghasilkan ion permanganat $(\ce{MnO4-})$ dan $\ce{Bi^3+}$.  
 a) Jika semua ion $\ce{Mn}$ dalam air minum terdapat sebagai ion $\ce{Mn^2+}$, hitung konsentrasi molar ion $\ce{Mn^2+}$ maksimum yang dibolehkan. **(2)**   
