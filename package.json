@@ -5,8 +5,7 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "config-build": "rollup --config ./config/rollup.config.mjs",
-    "config-dev": "rollup --config ./config/rollup.config.mjs -w",
-    "plugin-dev": "rollup --config ./plugin/rollup.config.mjs -w"
+    "config-dev": "rollup --config ./config/rollup.config.mjs -w"
   },
   "dependencies": {
     "@docusaurus/core": "^2.3.1",
