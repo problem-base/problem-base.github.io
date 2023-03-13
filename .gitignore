@@ -3,6 +3,7 @@ docusaurus.config.js
 
 .config
 .plugin
+.log
 
 node_modules
 build
