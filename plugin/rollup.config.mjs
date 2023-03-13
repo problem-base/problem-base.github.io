@@ -14,7 +14,7 @@ const file = globSync(`${BASE_DIR}/plugin/**/*.ts`).map(file =>
 
 const input = {}
 file.forEach(file => {
-    if(file != "index") input[file] = `${BASE_DIR}/plugin/${file}.ts`
+    input[file] = `${BASE_DIR}/plugin/${file}.ts`
 })
 
 async function runTesting() {
