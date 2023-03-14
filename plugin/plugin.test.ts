@@ -8,6 +8,13 @@ import rehypeStringify from 'rehype-stringify'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
+interface ProtoParse extends Parser{
+    interruptParagraph: string[],
+    interruptList: string[],
+    interruptBlockquote: string[],
+    blockTokenizers: Record<string, Tokenizer>
+}
+
 function loggerPlugin(this:Processor<Settings>){
     this.Compiler = function(tree, file){
         fs.writeFileSync("./plugin/.log", JSON.stringify(tree, null, 4))
@@ -21,13 +28,15 @@ const createParser = ({ name, locator, tokenizer, type }:{
     tokenizer: Tokenizer,
     type: "inline" | "block"
 }) => {
-    return (proto:Parser) => {
+    return (proto:ProtoParse) => {
         const method = type === "block" ? proto.blockMethods : proto.inlineMethods
         const anchor = type === "block" ? "fencedCode" : "text"
         method.splice(method.indexOf(anchor), 0, name)
 
         tokenizer.locator = locator
-        proto.inlineTokenizers[name] = tokenizer
+
+        const protoToken = type === "block" ? proto.blockTokenizers : proto.inlineTokenizers
+        protoToken[name] = tokenizer
     }
 }
 
@@ -135,7 +144,7 @@ const blockMath = createParser({
             }
         })
     },
-    type: "inline"
+    type: "block"
 })
 
 async function main() {
@@ -146,7 +155,7 @@ async function main() {
         //.use(rehypeKatex)
         //.use(rehypeStringify)
         .use(function(){
-            const proto:Parser = this.Parser.prototype
+            const proto = this.Parser.prototype as ProtoParse
 
             blockMath(proto)
             midMath(proto)
