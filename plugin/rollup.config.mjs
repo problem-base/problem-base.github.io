@@ -33,7 +33,7 @@ export default defineConfig({
         entryFileNames: "[name].mjs",
     },
     treeshake: true,
-    external: [/node_modules/],
+    external: [/remark/, /rehype/, /unist/, /unified/, /katex/],
     plugins: [
         typescript({
             compilerOptions: {
