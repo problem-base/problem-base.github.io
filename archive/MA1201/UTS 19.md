@@ -5,17 +5,10 @@ Salin dan lengkapi tabel berikut pada lembar jawab Anda. Tentukan, apakah limit 
 
 |   | Fungsi | Jenis | Bentuk Tak Tentu (Ya/Tidak) |
 |:-:| :----: | :---: | :-------------------------: |
-<<<<<<< HEAD
-|contoh| $$\lim_{x \rightarrow 0} \frac{\sin x}{x}$ | Bentuk $\left(\frac{0}{0} \right)$$ | Ya |
-|(i)| $$\lim_{x \rightarrow \infty} xe^{-x}$ | $\cdots$ | $\cdots$$ |
-|(ii)| $$\lim_{x \rightarrow 0^+} \left( \frac{1}{x} - \ln x \right)$ | $\cdots$ | $\cdots$$ |
-|(iii)| $$\lim_{x \rightarrow 0^-} (1 + \sin x)^{1/x^2}$ | $\cdots$ | $\cdots$$ |
-=======
 |contoh| $$\lim_{x \rightarrow 0} \frac{\sin x}{x}$$ | Bentuk $\left(\frac{0}{0} \right)$ | Ya |
 |(i)| $$\lim_{x \rightarrow \infty} xe^{-x}$$ | $\cdots$ | $\cdots$ |
 |(ii)| $$\lim_{x \rightarrow 0^+} \left( \frac{1}{x} - \ln x \right)$$ | $\cdots$ | $\cdots$ |
 |(iii)| $$\lim_{x \rightarrow 0^-} (1 + \sin x)^{1/x^2}$$ | $\cdots$ | $\cdots$ |
->>>>>>> 8caa092 (Migrate content to new parser)
 
 ### 2
 Tentukan $$\int \tan^2 x\ dx$$.
