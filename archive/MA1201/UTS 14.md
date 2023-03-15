@@ -1,19 +1,19 @@
 ## Bagian A
 
 ### 1
-Hitung $\displaystyle \int (\tan x + \sec x)^2\ dx$
+Hitung $$\int (\tan x + \sec x)^2\ dx$$
 
 ### 2
-Hitung $\displaystyle \int \frac{dx}{x^2 - 4}$
+Hitung $$\int \frac{dx}{x^2 - 4}$$
 
 ### 3
-Hitung $\displaystyle \lim_{x \rightarrow 0} \frac{1-\sec x}{x^2}$
+Hitung $$\lim_{x \rightarrow 0} \frac{1-\sec x}{x^2}$$
 
 ### 4
-Hitung $\displaystyle \int_{1}^{2} \frac{1}{(x - 1)^{3/4}}\ dx$
+Hitung $$\int_{1}^{2} \frac{1}{(x - 1)^{3/4}}\ dx$$
 
 ### 5
-Selidiki kekonvergenan deret $\displaystyle \sum_{n = 1}^{\infty} \frac{n2^n}{3^n}$
+Selidiki kekonvergenan deret $$\sum_{n = 1}^{\infty} \frac{n2^n}{3^n}$$
 
 ### 6
 Tentukan kemiringan/gradien garis singgung dari kurva
@@ -23,14 +23,14 @@ y = t^2 + e^t
 \end{cases}$ di titik $(1,1)$
 
 ### 7
-Tentukan jari-jari kekonvergenan deret $\displaystyle \sum_{n = 1}^{\infty} \frac{(x - 1)^n}{n2^n}$
+Tentukan jari-jari kekonvergenan deret $$\sum_{n = 1}^{\infty} \frac{(x - 1)^n}{n2^n}$$
 
 ## Bagian B
 
 ### 1
-a) Hitung $\displaystyle \int t^2e^t\ dt$.  
-b) Hitung $\displaystyle \lim_{t \rightarrow -\infty} e^t(t^2-2t+2)$.  
-c) Selidiki kekonvergenan integral tak wajar $\displaystyle \int_{-\infty}^{0} t^2e^t\ dt$.  
+a) Hitung $$\int t^2e^t\ dt$$.  
+b) Hitung $$\lim_{t \rightarrow -\infty} e^t(t^2-2t+2)$$.  
+c) Selidiki kekonvergenan integral tak wajar $$\int_{-\infty}^{0} t^2e^t\ dt$$.  
 
 ### 2
 Diberikan fungsi $f(x) = \sin(x - 0,1)$.  
