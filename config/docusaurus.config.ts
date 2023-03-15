@@ -4,14 +4,12 @@ import type { Options as OptionsPages } from "@docusaurus/plugin-content-pages"
 import type { Options as OptionsTheme } from "@docusaurus/theme-classic"
 import type { ThemeConfig, NavbarItem } from "@docusaurus/theme-common"
 
-import remarkMath from "remark-math"
-import rehypeKatex from "rehype-katex"
-import "rehype-katex/node_modules/katex/contrib/mhchem/mhchem"
+import { customRehypeMath, customRemarkMath } from "@plugin/customMathPlugin"
 
 const BASE_DIR = process.cwd()
 const baseDocsOption = {
-    remarkPlugins: [(remarkMath as any)],
-    rehypePlugins: [rehypeKatex]
+    remarkPlugins: [customRemarkMath],
+    rehypePlugins: [customRehypeMath]
 } as OptionsDocs
 
 const organizationName = "problem-base"
