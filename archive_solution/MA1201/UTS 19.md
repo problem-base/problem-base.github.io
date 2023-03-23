@@ -7,4 +7,10 @@
 
 
 ### 2
-...
+$$\int  \tan^2 x\ dx$$  
+$$=\int 1 - \sec^2 x\ dx$$  
+$$=x - \tan x + C$$
+
+### 3
+Dikarenakan deret kedua merupakan deret berganti tanda, maka dengan $$\lim_{n \rightarrow \infty} a_n = 0$$, dapat diambil kesimpulan bahwa deret tersebut adalah konvergen.  
+Jika deret absolutnya divergen, namun berganti tandanya konvergen. Maka deret tersebut disebut dengan deret konvergen bersyarat.

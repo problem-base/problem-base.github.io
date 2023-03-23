@@ -1,11 +1,8 @@
 import { readFileSync, existsSync } from "fs"
 import { relative, resolve } from "path"
-import remarkParse from 'remark-parse'
-import remarkStringify from "remark-stringify"
 import unified, { Plugin, Processor, Settings } from "unified"
 import { Node } from "unist"
 import { visit } from "unist-util-visit"
-import { customRemarkMath } from "./customMathPlugin"
 
 function createHeadingTracker(){
     const depths:number[] = [0]
