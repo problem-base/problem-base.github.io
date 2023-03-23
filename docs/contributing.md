@@ -43,7 +43,7 @@ base: main
 head repository: YOUR_USERNAME/problem-base.github.io  
 base: NEW_BRANCH  
 ```
-1. Create pull request, and add some mention to issues if available
+18. Create pull request, and add some mention to issues if available
 1. Wait till maintainer merge your writing and remember to check input from maintainter too
 
 ## Creating Solution for The Problem 
