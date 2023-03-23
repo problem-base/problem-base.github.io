@@ -5,7 +5,8 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "config-build": "rollup --config ./config/rollup.config.mjs",
-    "config-dev": "rollup --config ./config/rollup.config.mjs -w"
+    "config-dev": "rollup --config ./config/rollup.config.mjs -w",
+    "plugin-dev": "rollup --config ./plugin/rollup.config.mjs -w"
   },
   "dependencies": {
     "@docusaurus/core": "^2.3.1",
@@ -24,7 +25,9 @@
     "remark-math": "^3",
     "remark-parse": "^8",
     "remark-rehype": "^8",
+    "remark-stringify": "^8",
     "rollup": "^3.18.0",
+    "to-vfile": "^7.2.4",
     "unified": "^8",
     "unist-util-visit": "^4.1.2"
   },
