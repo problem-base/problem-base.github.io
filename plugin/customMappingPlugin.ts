@@ -1,11 +1,11 @@
-import fs from "fs"
+import { readFileSync, existsSync } from "fs"
 import { relative, resolve } from "path"
 import remarkParse from 'remark-parse'
+import remarkStringify from "remark-stringify"
 import unified, { Plugin, Processor, Settings } from "unified"
 import { Node } from "unist"
 import { visit } from "unist-util-visit"
-
-const markdownParser = unified().use(remarkParse)
+import { customRemarkMath } from "./customMathPlugin"
 
 function createHeadingTracker(){
     const depths:number[] = [0]
@@ -37,10 +37,10 @@ function createHeadingTracker(){
     return obj
 }
 
-function parseHeading(content:string){
+function parseHeading(content:string, parser:Processor<Settings>["parse"]){
     const headingRecord:Record<string, any[]> = {}
 
-    const tree = markdownParser.parse(content)
+    const tree = parser(content)
 
     unified()
         .use(function () {
@@ -73,50 +73,39 @@ function parseHeading(content:string){
 const customRemarkMapping = function(this:Processor<Settings>, { problem, solution }){
     if(!problem || !solution) throw "Problem or Solution is undefined"
 
-    return function (tree:Node, file:any) {
+    const parser = this.parse
+    return function(tree:Node & { children: Node[] }, file){
         const relativePath = relative(solution, file.history[0])
         const problemPath = resolve(problem, relativePath)
 
-        if(!fs.existsSync(problemPath)) return
-        const problemTree = markdownParser.parse(fs.readFileSync(problemPath))
-        const solutionHeading = parseHeading(String(file.value))
+        if(!existsSync(problemPath)) throw `Problem file in ${problemPath} is not exist`
+        const headingProblem = parseHeading(readFileSync(problemPath, "utf-8"), parser)
 
-        // @ts-ignore
-        tree.children = problemTree.children
-        tree.position = problemTree.position
-
-        // Deffered application, so it won't conflict with current tree
-        const deferred: [{ children: Node[] }, number, Node[]][] = []
         const headingTracker = createHeadingTracker()
-        
-        visit(tree, null, function (element, _, parent: {
-            children: Node[]
-        }) {
-            if (element.type === "heading") {
+        const deffered: [
+            Node & {children: Node[]}, 
+            number, 
+            Node[]
+        ][] = []
+
+        visit(tree, null, function(element, _, parent){
+            if(element.type === "heading"){
                 headingTracker.track(element)
                 const curr = headingTracker.currentHeading
-                const index = parent.children.indexOf(element)
-                if (curr in solutionHeading) deferred.push([parent, index + 1, solutionHeading[curr]])
+                const index = parent?.children.indexOf(element)
+                if(!parent || index === undefined || !(curr in headingProblem)) return
+                deffered.push([parent, index + 1, headingProblem[curr]])
             }
         })
 
-        // Sorted from largest to smallest index
-        deferred.sort(([_a, a], [_b, b]) => {
-            return b - a
-        })
-
-        for (const [parent, index, children] of deferred) {
-            const line = {
-                type: "thematicBreak",
-                indent: []
-            } as Node
-            parent.children.splice(index, 0, ...children, line)
+        for(let i = deffered.length - 1; i >= 0; --i){
+            const [parent, index, children] = deffered[i]
+            parent.children.splice(index, 0, ...children, { type: "thematicBreak" })
         }
     }
 } as Plugin<[{
     problem:string,
-    solution:string
+    solution:string,
 }]>
 
 export { customRemarkMapping }
-

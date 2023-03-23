@@ -10,8 +10,9 @@ import { visit } from "unist-util-visit"
 import { Node } from "unist"
 import { relative, resolve } from "path"
 import { customRemarkMapping } from "./customMappingPlugin"
+import remarkStringify from "remark-stringify"
 
-//import { customRehypeMath, customRemarkMath } from "./customMathPlugin"
+import { customRehypeMath, customRemarkMath } from "./customMathPlugin"
 
 function loggerPlugin(this: Processor<Settings>) {
     this.Compiler = function (tree, file) {
@@ -23,14 +24,19 @@ function loggerPlugin(this: Processor<Settings>) {
 async function main() {
     const file = await unified()
         .use(remarkParse)
+        .use(customRemarkMath)
+
         .use(customRemarkMapping, {
-            problem: "./plugin/source",
-            solution: "./plugin/target"
+            problem: "./archive",
+            solution: "./archive_solution"
         })
+
         .use(remarkRehype)
+        .use(customRehypeMath)
         .use(rehypeStringify)
+
         //.use(loggerPlugin)
-        .process(await read("./plugin/target/MA/test.md"))
+        .process(await read("./archive_solution/MA1201/UTS 19.md"))
 
     console.log("\n-----------")
     console.log(file.contents)
