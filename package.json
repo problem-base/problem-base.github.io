@@ -25,6 +25,7 @@
     "remark-math": "^3",
     "remark-parse": "^8",
     "remark-rehype": "^8",
+    "remark-stringify": "^8",
     "rollup": "^3.18.0",
     "to-vfile": "^7.2.4",
     "unified": "^8",

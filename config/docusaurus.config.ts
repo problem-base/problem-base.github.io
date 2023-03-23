@@ -5,13 +5,10 @@ import type { Options as OptionsTheme } from "@docusaurus/theme-classic"
 import type { ThemeConfig, NavbarItem } from "@docusaurus/theme-common"
 
 import { customRehypeMath, customRemarkMath } from "@plugin/customMathPlugin"
+import {resolve} from "path"
+import { customRemarkMapping } from "@plugin/customMappingPlugin"
 
 const BASE_DIR = process.cwd()
-const baseDocsOption = {
-    remarkPlugins: [customRemarkMath],
-    rehypePlugins: [customRehypeMath]
-} as OptionsDocs
-
 const organizationName = "problem-base"
 const projectName = "problem-base.github.io"
 
@@ -24,7 +21,7 @@ export default {
         [
             '@docusaurus/theme-classic',
             {
-                customCss: require.resolve(BASE_DIR + "/src/css/custom.css")
+                customCss: resolve(BASE_DIR + "/src/css/custom.css")
             } as OptionsTheme,
         ]
     ],
@@ -61,7 +58,8 @@ export default {
                 id: 'default',
                 path: 'archive',
                 routeBasePath: 'archive',
-                ...baseDocsOption
+                remarkPlugins: [customRemarkMath],
+                rehypePlugins: [customRehypeMath]
             } as OptionsDocs,
         ],
         [
@@ -70,9 +68,28 @@ export default {
                 id: 'docs',
                 path: 'docs',
                 routeBasePath: 'docs',
-                ...baseDocsOption
+                remarkPlugins: [customRemarkMath],
+                rehypePlugins: [customRehypeMath]
             } as OptionsDocs,
         ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: "solution",
+                path: 'archive_solution',
+                routeBasePath: 'solution',
+                remarkPlugins: [
+                    customRemarkMath,
+                    [
+                        customRemarkMapping, {
+                            problem: "./archive",
+                            solution: "./archive_solution",
+                        }
+                    ],
+                ],
+                rehypePlugins: [customRehypeMath]
+            } as OptionsDocs
+        ]
     ],
     stylesheets: [
         {
