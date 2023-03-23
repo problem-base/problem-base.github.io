@@ -1,2 +1,5 @@
+---
+sidebar_position: 1
+---
 # Documentation
-Work In Progress
+Here you can find some documentation about this project
