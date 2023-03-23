@@ -34,7 +34,17 @@ If you're ready, then follow this step (Don't forget to change `UPPERCASE` word)
 ### Pull Request
 14. Push change with `git push origin NEW_BRANCH`
 1. Open cloned repo in github website
-1. You will see button named `Create Pull Request`, click it and add some message if needed
+1. Open new pull request
+1. Compare your branch from forked repo to main repo  
+For example:
+```
+base repository: problem-base/problem-base.github.io  
+base: main  
+head repository: YOUR_USERNAME/problem-base.github.io  
+base: NEW_BRANCH  
+```
+1. Creaet pull request
+1. Wait till maintainer merge your writing and remember to check input from maintainter too
 
 ## Creating Solution for The Problem 
-It's the basically same as [writing problem](#writing-problem-to-markdown), but the only difference is you need to create appropriate solution file in `archived_solution`, and match filename, directory, and problem number with problem file in `archived`
+It's the basically same as [writing problem](#writing-problem-to-markdown), but the only difference is you need to create appropriate solution file in `archive_solution` folder, and match it filename, directory, and problem number with problem file in `archive`
