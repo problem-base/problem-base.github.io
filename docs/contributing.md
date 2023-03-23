@@ -46,5 +46,11 @@ base: NEW_BRANCH
 18. Create pull request, and add some mention to issues if available
 1. Wait till maintainer merge your writing and remember to check input from maintainter too
 
+### Cleanup
+20. After merged, sync your forked repo with main repo in github
+1. Delete remote branch in github if needed
+1. Fetch update with `git fetch --rebase`
+1. Delete branch with `git branch --delete NEW_BRANCH`
+
 ## Creating Solution for The Problem 
 It's the basically same as [writing problem](#writing-problem-to-markdown), but the only difference is you need to create appropriate solution file in `archive_solution` folder, and match it filename, directory, and problem number with problem file in `archive`

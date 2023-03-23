@@ -18,7 +18,7 @@ async function main() {
         .use(remarkParse)
         .use(remarkRehype)
         .use(rehypeStringify)
-        //.use(loggerPlugin)
+        .use(loggerPlugin)
         .process("Test")
 
     console.log("\n-----------")
