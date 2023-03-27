@@ -40,7 +40,7 @@ c) Tentukan batas galat (error) dari jawaban b
 
 ### 3
 Pada gambari disamping, daerah yang diarsir adalah sebuah pula dibatasi oleh kurva $C_1$ dan $C_2$. Kurva $C_1$ adalah parabola $y = x^2,\ \ 1 \le x \le 5$. Pada titik $O(0,0)$ terdapat mercusuar yang berputar dengan laju satu putaran per menit. Misalkan $P(x,y)$ adalah titik pada pantai $C_1$ yang terkena sinar mercusuar dan $\theta$ sudut antara $\overrightarrow{OP}$ dan sumbu $x$ positif.  
-![Gambar Pulau](images/15.PNG)  
+![Gambar Pulau](images/14.PNG)  
 a) Tentukan rentang nilai $\theta$ agar mercusuar menyinari sepanjang pantai $C_1$.  
 b) Buktikan bahwa posisi titik $P$ adalah $(\tan \theta, \tan^2 \theta)$.  
 c) Tentukan kecepatan gerak titik $P$ sepanjang kurva $C_1$ di titik $(1,1)$.  
