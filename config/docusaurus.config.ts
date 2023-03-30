@@ -13,10 +13,11 @@ const organizationName = "problem-base"
 const projectName = "problem-base.github.io"
 
 export default {
-    title: "PBase",
+    title: "Base",
     baseUrl: "/",
     url: `https://${organizationName}.github.io`,
     organizationName, projectName,
+    staticDirectories: ["src/static"],
     themes: [
         [
             '@docusaurus/theme-classic',
@@ -27,7 +28,7 @@ export default {
     ],
     themeConfig: {
         navbar: {
-            title: "PBase",
+            title: "⁋ Base",
             items: [
                 {
                     type: "doc",
@@ -45,6 +46,17 @@ export default {
         },
     } as ThemeConfig,
     plugins: [
+        async function myPlugin() {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    // Appends TailwindCSS and AutoPrefixer.
+                    postcssOptions.plugins.push(require("tailwindcss"));
+                    postcssOptions.plugins.push(require("autoprefixer"));
+                    return postcssOptions;
+                },
+            };
+        },
         [
             '@docusaurus/plugin-content-pages',
             {
