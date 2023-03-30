@@ -4,6 +4,7 @@ docusaurus.config.js
 .config
 .plugin
 .log
+.DS_Store
 
 node_modules
 build
