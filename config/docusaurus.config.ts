@@ -53,6 +53,9 @@ export default {
                     // Appends TailwindCSS and AutoPrefixer.
                     postcssOptions.plugins.push(require("tailwindcss"));
                     postcssOptions.plugins.push(require("autoprefixer"));
+                    if(process.env.NODE_ENV === "production"){
+                        postcssOptions.plugins.push(require("cssnano"))
+                    }
                     return postcssOptions;
                 },
             };
